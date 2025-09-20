@@ -1,0 +1,311 @@
+/* Importação de fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Resets e a base do visual 'uau' */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* --- Cabeçalho: O cartão de visitas do seu site --- */
+.cabeçalho {
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+    border-bottom: 3px solid #00aaff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.cabeçalho h1 {
+    font-size: 3em;
+    color: #00aaff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00aaff80;
+    transition: text-shadow 0.5s ease;
+}
+
+.cabeçalho h1:hover {
+    text-shadow: 0 0 15px #00aaff;
+}
+
+.cabeçalho h2 {
+    font-size: 1.1em;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 15px auto 0;
+    color: #b0b0b0;
+}
+
+/* Estilização para o ícone de casa no canto discreto */
+.home-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: #f0f0f0;
+}
+
+.home-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* --- Corpo Principal: O palco do seu conteúdo --- */
+.corpo {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.corpo h3 {
+    font-size: 2em;
+    color: #00aaff;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.corpo h4 {
+    font-size: 1.7em;
+    color: #00aaff;
+    margin-top: 40px;
+    padding-bottom: 5px;
+}
+
+.corpo p {
+    font-size: 1em;
+    margin: 20px 0;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.corpo img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.corpo img:hover {
+    transform: scale(1.02);
+}
+
+.corpo hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #333, #00aaff, #333);
+    margin: 50px 0;
+}
+
+/* --- Rodapé TOP (adaptado ao seu novo HTML) --- */
+footer {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    padding: 40px 20px;
+    border-top: 3px solid #00aaff;
+}
+
+.rodape-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.info-pessoal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info-pessoal img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+    box-shadow: 0 0 15px #00aaff80;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.info-pessoal img:hover {
+    transform: scale(1.1);
+}
+
+.nome-perfil {
+    margin: 5px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.contato {
+    font-size: 1em;
+    margin: 5px 0 20px 0;
+}
+
+.botao-sobremim button {
+    background-color: #00aaff;
+    color: #121212;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-sobremim button:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+}
+
+.links-uteis {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links-uteis p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.redes-sociais, .links-uteis ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.redes-sociais li, .links-uteis ul li {
+    margin-bottom: 5px;
+}
+
+.redes-sociais a, .links-uteis ul a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.redes-sociais a:hover, .links-uteis ul a:hover {
+    color: #00aaff;
+    transform: scale(1.05);
+}
+
+/* --- Responsividade do Rodapé --- */
+@media (max-width: 768px) {
+    .cabeçalho {
+        padding: 30px 15px;
+    }
+    .cabeçalho h1 {
+        font-size: 2.2em;
+        letter-spacing: 1px;
+    }
+    .cabeçalho h2 {
+        font-size: 1em;
+        margin: 10px auto 0;
+    }
+    .home-link {
+        top: 15px;
+        right: 15px;
+    }
+    .corpo {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+    .corpo h3 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .corpo h4 {
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+    .corpo p {
+        font-size: 0.95em;
+    }
+    .corpo img {
+        height: 250px;
+    }
+    .rodape-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .info-pessoal, .links-uteis {
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .cabeçalho {
+        padding: 20px 10px;
+    }
+    .cabeçalho h1 {
+        font-size: 1.8em;
+    }
+    .cabeçalho h2 {
+        font-size: 0.9em;
+    }
+    .home-link {
+        top: 10px;
+        right: 10px;
+    }
+    .corpo {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    .corpo h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .corpo h4 {
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+    .corpo p {
+        font-size: 0.9em;
+    }
+    .corpo img {
+        height: 200px;
+        margin: 20px auto;
+    }
+    footer {
+        padding: 30px 10px;
+    }
+    .rodape-container {
+        gap: 20px;
+    }
+    .info-pessoal img {
+        width: 80px;
+        height: 80px;
+    }
+    .botao-sobremim button {
+        font-size: 0.9em;
+        padding: 8px 18px;
+    }
+}

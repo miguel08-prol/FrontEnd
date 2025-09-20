@@ -1,0 +1,340 @@
+/* Importação de fonte moderna do Google Fonts */
+/* Adicionando a importação do Google Fonts, embora não esteja no código original */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo para todas as imagens, exceto as do rodapé, para centralização */
+img:not(footer img) {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: block;
+}
+
+/* Cabeçalho */
+.cabeçalho {
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabeçalho h6 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cabeçalho h5 {
+    font-weight: normal;
+    margin-top: 10px;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Estilização para o ícone de casa no canto discreto */
+.home-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: #f0f0f0;
+}
+
+.home-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Corpo */
+.corpo {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #242424;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.corpo h1 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.corpo h2 {
+    margin-top: 35px;
+    color: #ff9900;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 8px;
+    margin-left: 10px;
+}
+
+.corpo h3 {
+    margin: 15px 10px;
+    font-weight: normal;
+    background-color: #292929;
+    padding: 12px;
+    border-left: 5px solid #ff6600;
+    border-radius: 5px;
+    font-size: 1.05em;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 2px solid #ff6600;
+}
+
+.rodape-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 40px;
+}
+
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+.perfil-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff6600;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.perfil-img:hover {
+    transform: scale(1.1);
+}
+
+.nome-perfil {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contato-info {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.link-botao {
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    color: #1a1a1a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.link-botao:hover {
+    background: linear-gradient(135deg, #e6b800, #e65c00);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+.links-uteis {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 25px;
+}
+
+.links-secao h4 {
+    font-size: 1.2em;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.lista-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.lista-links a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .cabeçalho {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .cabeçalho h6 {
+        font-size: 1.5em;
+    }
+    .cabeçalho h5 {
+        font-size: 1em;
+    }
+    .corpo {
+        padding: 20px;
+    }
+    .corpo h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .corpo h2 {
+        font-size: 1.5em;
+        margin-top: 25px;
+    }
+    .corpo h3 {
+        font-size: 1em;
+        padding: 10px;
+        margin: 10px;
+    }
+    footer {
+        margin-top: 40px;
+        padding: 30px 15px;
+    }
+    .rodape-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding-top: 20px;
+    }
+    .perfil-info {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .perfil-img {
+        width: 80px;
+        height: 80px;
+    }
+    .nome-perfil {
+        font-size: 1.1em;
+    }
+    .contato-info {
+        font-size: 0.95em;
+    }
+    .link-botao {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+    .links-uteis {
+        align-items: center;
+        gap: 20px;
+    }
+    .links-secao {
+        text-align: center;
+    }
+    .lista-links {
+        gap: 6px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    .cabeçalho {
+        padding: 10px;
+    }
+    .cabeçalho h6 {
+        font-size: 1.2em;
+    }
+    .cabeçalho h5 {
+        font-size: 0.9em;
+    }
+    .home-link {
+        right: 10px;
+    }
+    .home-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .corpo {
+        padding: 15px;
+    }
+    .corpo h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .corpo h2 {
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+    .corpo h3 {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+    footer {
+        margin-top: 30px;
+        padding: 20px 10px;
+    }
+    .rodape-container {
+        gap: 20px;
+    }
+    .perfil-img {
+        width: 70px;
+        height: 70px;
+    }
+    .links-secao h4 {
+        font-size: 1.1em;
+    }
+}

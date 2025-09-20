@@ -1,0 +1,369 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;700&display=swap');
+
+/* --- Variáveis e Reset Básico --- */
+:root {
+    --dark-bg: #1a1a2e;
+    --card-bg: linear-gradient(145deg, #232338, #1e1e30);
+    --accent-color: #ff5f7b;
+    --text-color: #e0e0e0;
+    --heading-color: #ff849a;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --shadow-light: rgba(255, 95, 123, 0.3);
+    --shadow-dark: rgba(0, 0, 0, 0.6);
+    --gradient-accent: linear-gradient(45deg, #ff5f7b, #ffc6a3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.7;
+    padding-bottom: 70px;
+}
+
+/* --- Cabeçalho e Navegação --- */
+.top {
+    background: linear-gradient(145deg, #2b2b44, #222238);
+    color: var(--text-color);
+    padding: 25px 50px;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--accent-color);
+    box-shadow: 0 6px 15px var(--shadow-dark);
+}
+
+.top p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 0 8px var(--shadow-light);
+}
+
+.home-link {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.home-link:hover {
+    color: var(--accent-color);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+.home-icon {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+
+/* --- Conteúdo Principal (Receita) --- */
+.conteudo-principal {
+    max-width: 950px;
+    margin: 80px auto;
+    padding: 50px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px var(--shadow-dark);
+    border: 1px solid var(--border-color);
+}
+
+.corpo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+.corpo .intro {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 40px;
+    opacity: 0.9;
+}
+
+.corpo figure {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.corpo figure img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px var(--shadow-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.corpo figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px var(--shadow-light);
+}
+
+.corpo figure figcaption {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Seções de Ingredientes e Modo de Preparo */
+.ingredientes, .modo-preparo {
+    margin-top: 60px;
+    padding: 30px;
+    background: var(--dark-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px var(--shadow-dark);
+}
+
+.ingredientes h2, .modo-preparo h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.ingredientes h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-top: 30px;
+    margin-bottom: 18px;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 12px;
+    font-weight: 600;
+}
+
+.ingredientes ul, .modo-preparo ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ingredientes li, .modo-preparo li {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 2px solid var(--accent-color);
+}
+
+.ingredientes li:hover, .modo-preparo li:hover {
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.modo-preparo h3 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.modo-preparo p {
+    text-align: justify;
+    opacity: 0.9;
+}
+
+/* --- Rodapé --- */
+.rodape {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-top: 3px solid var(--accent-color);
+    box-shadow: 0 -4px 10px var(--shadow-dark);
+}
+
+.rodape-coluna {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.rodape-coluna h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.rodape-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-coluna li {
+    margin-bottom: 12px;
+}
+
+.rodape-coluna a, .rodape-coluna li {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.rodape-coluna a:hover {
+    color: var(--accent-color);
+}
+
+.rodape-copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    .conteudo-principal {
+        margin: 60px 20px;
+        padding: 40px;
+    }
+    .corpo h1 {
+        font-size: 3rem;
+    }
+    .corpo .intro {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+    .rodape {
+        padding: 40px 20px;
+    }
+    .rodape-coluna {
+        min-width: 180px;
+        margin: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .top {
+        padding: 15px 20px;
+    }
+    .top p {
+        font-size: 1.8rem;
+    }
+    .home-link {
+        right: 20px;
+    }
+    .conteudo-principal {
+        margin: 60px 20px;
+        padding: 30px;
+    }
+    .corpo h1 {
+        font-size: 2.5rem;
+    }
+    .corpo .intro {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .ingredientes h2, .modo-preparo h2 {
+        font-size: 2rem;
+    }
+    .ingredientes h3 {
+        font-size: 1.2rem;
+    }
+    .ingredientes li, .modo-preparo li {
+        padding: 15px;
+    }
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .rodape-coluna {
+        margin: 15px 0;
+        text-align: center;
+        min-width: auto;
+    }
+}
+@media (max-width: 480px) {
+    .top p {
+        font-size: 1.5rem;
+    }
+    .home-link {
+        right: 10px;
+        padding: 8px;
+    }
+    .home-icon {
+        width: 24px;
+        height: 24px;
+    }
+    .conteudo-principal {
+        margin: 40px 10px;
+        padding: 20px;
+    }
+    .corpo h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .corpo .intro {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    .corpo figure img {
+        height: auto;
+        margin: 20px auto;
+    }
+    .ingredientes, .modo-preparo {
+        padding: 20px;
+        margin-top: 40px;
+    }
+    .ingredientes h2, .modo-preparo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .ingredientes h3 {
+        font-size: 1.1rem;
+    }
+    .rodape {
+        padding: 20px 10px;
+    }
+    .rodape-coluna h4 {
+        font-size: 1.3rem;
+    }
+    .rodape-copyright {
+        font-size: 0.8rem;
+    }
+}

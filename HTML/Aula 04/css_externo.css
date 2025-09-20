@@ -1,0 +1,41 @@
+/* Heigth: Altura */
+/* Width: Comprimento */
+
+h1 {
+color: rgb(3, 11, 11);
+background-color: rgb(227, 233, 231);
+text-align: center;
+padding: 10px;
+margin-right: 50px;
+height: 120px;
+width: 1200px;
+}
+
+h2 {
+color: black;
+background-color: beige;
+text-align: center;
+padding: 10px; 
+margin-left: 50px;
+height: 120px;
+width: 1200px;
+}
+ 
+/* Hover:quando passa o mouse */
+
+h1:hover { 
+color: antiquewhite;
+background-color: black;
+padding:15px;
+}
+
+h2:hover { 
+color: rgb(141, 99, 46);
+background-color: rgb(63, 21, 21);
+padding:15px;
+}
+
+img {
+height: 300px;
+width: auto;
+}

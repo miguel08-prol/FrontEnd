@@ -1,0 +1,239 @@
+/*
+   Igreja Santo Antônio - A vibrant and animated design
+*/
+
+/* --- Global and Body Styling --- */
+body {
+    background-color: #eaf2f8; /* A very light, calming blue */
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Header and Navigation --- */
+.topo {
+    background: linear-gradient(135deg, #1a5276, #3498db); /* A gradient from a deep to a bright blue */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.topo h1 {
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.lista a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.lista a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #f1c40f; /* A bright, divine gold */
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lista a:hover::after {
+    width: 100%;
+}
+
+/* --- Main Content and Sections --- */
+.Principal {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+h3 {
+    text-align: center;
+    color: #2c3e50; /* A dark, professional gray */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    animation: fadeInDown 1s ease-out;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background-color: #f1c40f;
+    border-radius: 3px;
+}
+
+/* --- Cards for Participation and Images --- */
+.corpo {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+}
+
+.corpo li {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, border-color 0.4s ease;
+    border: 3px solid transparent;
+}
+
+.corpo li:hover {
+    transform: translateY(-15px) rotate(1deg);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    border-color: #f1c40f;
+}
+
+.corpo a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.corpo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%);
+    transition: filter 0.5s ease;
+}
+
+.corpo li:hover img {
+    filter: grayscale(0%);
+}
+
+.corpo h4 {
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 1.5rem;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.corpo li {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.corpo li:nth-child(1) { animation-delay: 0.1s; }
+.corpo li:nth-child(2) { animation-delay: 0.2s; }
+.corpo li:nth-child(3) { animation-delay: 0.3s; }
+.corpo li:nth-child(4) { animation-delay: 0.4s; }
+.corpo li:nth-child(5) { animation-delay: 0.5s; }
+.corpo li:nth-child(6) { animation-delay: 0.6s; }
+.corpo li:nth-child(7) { animation-delay: 0.7s; }
+.corpo li:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .topo {
+        padding: 1rem;
+    }
+
+    .topo h1 {
+        font-size: 2rem;
+    }
+    
+    .lista {
+        gap: 1rem;
+    }
+    
+    .lista a {
+        font-size: 1rem;
+    }
+
+    .Principal {
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .corpo {
+        grid-template-columns: 1fr;
+    }
+}
+
+.retrato {
+    width: 80px; /* Ou o tamanho que preferir */
+    height: 80px; /* A altura deve ser igual à largura para um círculo perfeito */
+    border-radius: 50%; /* Transforma a imagem em um círculo */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 3px solid #f1c40f; /* Borda dourada para destacar */
+    margin-left: 10px; /* Espaço entre o texto e a imagem */
+    vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .retrato {
+        width: 60px;
+        height: 60px;
+    }
+}

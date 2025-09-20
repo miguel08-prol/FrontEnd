@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #004d99;
+  --secondary-color: #ffd700;
+  --bg-color: #f9fafc;
+  --card-bg: #ffffff;
+  --text-color: #2c3e50;
+  --glow-effect: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  padding-bottom: 60px;
+}
+
+/* Cabeçalho */
+.cabeçalho {
+  background: linear-gradient(135deg, var(--primary-color), #14354d);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cabeçalho h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lista {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.lista li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  font-size: 1.2rem;
+}
+
+.lista li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Conteúdo Principal */
+.corpo {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.corpo h1 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.corpo h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.corpo p {
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.corpo a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.meio {
+  display: block;
+  max-width: 100%;
+  margin: 30px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--secondary-color);
+}
+
+/* Cards */
+.card-section {
+  display: flex;
+  gap: 20px;
+  background: var(--card-bg);
+  margin: 30px 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card-section img {
+  flex: 1 1 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  flex: 2 1 400px;
+  padding: 15px;
+}
+
+.card-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cabeçalho h1 {
+    font-size: 2rem;
+  }
+
+  .lista {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-section {
+    flex-direction: column;
+  }
+
+  .card-content {
+    padding: 10px 0;
+  }
+
+  .corpo h1 {
+    font-size: 1.8rem;
+  }
+
+  .corpo h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.retrato {
+    width: 80px; /* Ou o tamanho que preferir */
+    height: 80px; /* A altura deve ser igual à largura para um círculo perfeito */
+    border-radius: 50%; /* Transforma a imagem em um círculo */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 3px solid #f1c40f; /* Borda dourada para destacar */
+    margin-left: 10px; /* Espaço entre o texto e a imagem */
+    vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .retrato {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Botão Home SVG branco */
+.home-icon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: none;
+  padding: 0;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.3s ease, fill 0.3s ease;
+  z-index: 100;
+}
+
+.home-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #ffffff; /* branco */
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.home-icon:hover svg {
+  fill: var(--secondary-color); /* dourado no hover */
+  transform: scale(1.1);
+}
+

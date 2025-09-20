@@ -1,0 +1,207 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Variáveis de Cores e Estilos */
+:root {
+    --primary-color: #215173;
+    --secondary-color: #f9cc00;
+    --bg-color: #f6f9fc;
+    --text-color: #2c3e50;
+    --card-bg: #fff;
+    --hover-glow: 0 0 15px rgba(249, 204, 0, 0.5);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do Corpo da Página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    padding-bottom: 60px;
+}
+
+/* Estilos do Cabeçalho e Navegação */
+.cabeçalho {
+    background: linear-gradient(135deg, var(--primary-color), #14354d);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.cabeçalho h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.lista li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.lista li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos da Seção Principal (Corpo) */
+.corpo {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.corpo h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
+}
+
+.corpo h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.corpo p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.corpo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 5px solid var(--secondary-color);
+    transition: transform 0.4s ease;
+}
+
+.corpo img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--hover-glow);
+}
+
+.home-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;   /* tira o fundo */
+    padding: 0;         /* sem espaçamento extra */
+    border: none;       /* sem borda */
+    transition: transform 0.3s ease;
+}
+
+.home-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;   /* cor branca padrão */
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.home-icon:hover {
+    transform: scale(1.1); /* zoom leve no hover */
+}
+
+.home-icon:hover svg {
+    fill: var(--secondary-color); /* muda pra dourado no hover */
+}
+
+/* Estilo do Retrato no Título */
+.retrato {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f1c40f;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Animações e Media Queries */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 768px) {
+    .cabeçalho h1 {
+        font-size: 2rem;
+    }
+
+    .lista {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .corpo h2 {
+        font-size: 1.8rem;
+    }
+
+    .corpo {
+        padding: 20px 15px;
+    }
+
+    .corpo p {
+        font-size: 1rem;
+    }
+
+    .home-icon {
+        top: 15px;
+        right: 15px;
+    }
+
+    .home-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .retrato {
+        width: 60px;
+        height: 60px;
+    }
+}

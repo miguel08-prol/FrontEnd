@@ -1,0 +1,52 @@
+#topico-principal {
+    background-color: lightblue;
+    color: darkgoldenrod;
+    text-align: center;
+}
+
+.topico {
+text-align: right;
+}
+
+.texto {
+text-align: justify;
+}
+
+a {
+font-weight: bold;
+text-decoration: nome;
+color: darkorchid;
+}
+
+a:visited {
+color: lightgreen;
+}
+
+a:hover {
+text-decoration: black;
+}
+
+.especial{
+color: red;
+background-color: black;
+text-decoration: none;
+}
+
+.especial::before{
+content: '.';
+font-weight: lighter;
+}
+
+.especial::after{
+content: '.';
+font-weight: lighter;
+}
+
+div > p {
+display: none;
+}
+
+div:hover > p {
+    display: block;
+    background-color: rgb(0, 128, 68);
+}
